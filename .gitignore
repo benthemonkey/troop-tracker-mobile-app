@@ -50,3 +50,8 @@ tt_mobile_app_key/KEYS
 release-key.jks
 Keystore
 /android/app/.cxx
+
+# Midwest: Firebase client config stays out of git (copies in ../mobile-local/)
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+lib/firebase_options.dart
