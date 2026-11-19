@@ -51,7 +51,12 @@ release-key.jks
 Keystore
 /android/app/.cxx
 
+<<<<<<< HEAD
 # Midwest: Firebase client config stays out of git (copies in ../mobile-local/)
 android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
 lib/firebase_options.dart
+=======
+# Test coverage output
+/coverage/
+>>>>>>> origin/main
