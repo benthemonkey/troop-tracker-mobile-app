@@ -40,7 +40,6 @@ class AppConfig {
 
   // All domains that should stay inside the WebView.
   static Set<String> get internalDomains => {
-        'redirectmeto.com',
         trackerDomain,
         ...extraInternalDomains,
       };
