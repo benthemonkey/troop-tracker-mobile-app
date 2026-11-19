@@ -59,7 +59,7 @@ void main() {
       await tester.pumpWidget(const TroopTrackerApp(home: Text('Home')));
 
       final app = tester.widget<MaterialApp>(find.byType(MaterialApp));
-      expect(app.title, 'Troop Tracker');
+      expect(app.title, AppConfig.appName);
       expect(app.debugShowCheckedModeBanner, isFalse);
       expect(app.theme!.colorScheme.brightness, Brightness.dark);
       expect(find.text('Home'), findsOneWidget);

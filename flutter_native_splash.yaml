@@ -6,7 +6,8 @@ flutter_native_splash:
   # Android 12+ uses a separate splash API
   android_12:
     color: "#00131F"
-    image: assets/logo.png
+    # 1152x1152, emblem inside the 768px circle Android 12 masks to
+    image: assets/splash_android12.png
     icon_background_color: "#00131F"
 
   # Disable web splash (mobile-only app)

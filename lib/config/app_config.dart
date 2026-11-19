@@ -4,7 +4,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 /// Single source of truth for all app-wide configuration.
 /// Change the URL, colors, or name here — nowhere else.
 abstract final class AppConfig {
-  static const String appName = 'Troop Tracker';
+  static const String appName = 'MWG Tracker';
 
   // The Tracker site loaded in the WebView.
   // Set TRACKER_URL in .env (copy .env.example → .env and edit).

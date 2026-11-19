@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tt_mobile_app/config/app_config.dart';
 import 'package:tt_mobile_app/views/main_shell_view.dart';
 import 'package:tt_mobile_app/views/splash_view.dart';
 import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
@@ -19,7 +20,7 @@ void main() {
     await tester.pumpWidget(MaterialApp(home: SplashView(next: next)));
 
     expect(find.byType(Image), findsOneWidget);
-    expect(find.text('Troop Tracker'), findsOneWidget);
+    expect(find.text(AppConfig.appName), findsOneWidget);
 
     await tester.pumpAndSettle(const Duration(seconds: 3));
   });

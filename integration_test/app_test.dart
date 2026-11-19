@@ -18,7 +18,7 @@ void main() {
 
   testWidgets('opens on the splash screen, then loads the tracker', (tester) async {
     await tester.pumpWidget(const TroopTrackerApp());
-    expect(find.text('Troop Tracker'), findsOneWidget);
+    expect(find.text(AppConfig.appName), findsOneWidget);
 
     await _waitFor(tester, find.text('TROOP TRACKER'));
     await _waitForRequest(tester, 'GET /');

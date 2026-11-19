@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:tt_mobile_app/config/app_config.dart';
 import 'package:tt_mobile_app/controllers/webview_controller.dart';
 import 'package:tt_mobile_app/views/settings_view.dart';
 import 'package:url_launcher_platform_interface/url_launcher_platform_interface.dart';
@@ -42,7 +43,7 @@ void main() {
 
     expect(find.text('2.0.2 (13)'), findsOneWidget);
     expect(find.text(testTrackerUrl), findsOneWidget);
-    expect(find.text('Troop Tracker'), findsOneWidget);
+    expect(find.text(AppConfig.appName), findsOneWidget);
   });
 
   testWidgets('Clear Cache clears the WebView and says so', (tester) async {

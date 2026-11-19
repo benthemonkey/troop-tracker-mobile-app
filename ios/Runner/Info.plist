@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Troop Tracker</string>
+	<string>MWG Tracker</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -29,11 +29,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Troop Tracker needs camera access to upload photos.</string>
+	<string>MWG Tracker needs camera access to upload photos.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Troop Tracker needs permission to save images to your photo library.</string>
+	<string>MWG Tracker needs permission to save images to your photo library.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Troop Tracker needs photo library access to upload images.</string>
+	<string>MWG Tracker needs photo library access to upload images.</string>
 	<key>_UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

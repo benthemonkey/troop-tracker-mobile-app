@@ -4,6 +4,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tt_mobile_app/config/app_config.dart';
 import 'package:tt_mobile_app/controllers/notifications_controller.dart';
 import 'package:tt_mobile_app/controllers/webview_controller.dart';
 import 'package:tt_mobile_app/models/push_notification.dart';
@@ -80,7 +81,7 @@ void main() {
   testWidgets('starts on the tracker with the loading bar', (tester) async {
     await pumpShell(tester);
 
-    expect(find.text('TROOP TRACKER'), findsOneWidget);
+    expect(find.text(AppConfig.appName.toUpperCase()), findsOneWidget);
     expect(webView().loadedUrls, [testTrackerUrl]);
     expect(tester.widget<LoadingOverlay>(find.byType(LoadingOverlay)).isVisible, isTrue);
 
@@ -178,7 +179,7 @@ void main() {
       await tester.binding.handlePopRoute();
       await tester.pump();
 
-      expect(find.text('TROOP TRACKER'), findsOneWidget);
+      expect(find.text(AppConfig.appName.toUpperCase()), findsOneWidget);
       expect(platformCalls, isNot(contains('SystemNavigator.pop')));
     });
 

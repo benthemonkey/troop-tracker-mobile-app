@@ -44,7 +44,7 @@ class _MainShellViewState extends State<MainShellView> {
   late final StreamSubscription<RemoteMessage> _foregroundMessages;
   bool? _lastKnownLoggedIn;
 
-  static const _tabTitles = ['Troop Tracker', 'Notifications', 'Settings'];
+  static const _tabTitles = [AppConfig.appName, 'Notifications', 'Settings'];
 
   @override
   void initState() {
