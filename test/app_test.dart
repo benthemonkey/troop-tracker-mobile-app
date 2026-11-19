@@ -5,6 +5,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:tt_mobile_app/app.dart';
 import 'package:tt_mobile_app/config/app_config.dart';
+import 'package:tt_mobile_app/firebase_options.dart';
 import 'package:tt_mobile_app/views/splash_view.dart';
 
 void main() {
@@ -47,7 +48,8 @@ void main() {
       await initializeServices();
 
       expect(dotenv.isInitialized, isTrue);
-      expect(Firebase.apps.single.options.projectId, 'troop-tracker-dfd22');
+      expect(
+          Firebase.apps.single.options.projectId, DefaultFirebaseOptions.currentPlatform.projectId);
       expect(AppConfig.trackerUrl, isNotEmpty);
     });
   });
