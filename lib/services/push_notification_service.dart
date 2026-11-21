@@ -47,7 +47,10 @@ abstract final class PushNotificationService {
 
     await fcm.setForegroundNotificationPresentationOptions(alert: true, badge: true, sound: true);
 
+    // getToken/onTokenRefresh are deprecated for register()/onRegistered, but those return a
+    // Firebase Installation ID for direct send. The tracker stores and sends to FCM tokens.
     try {
+      // ignore: deprecated_member_use
       _setToken(await fcm.getToken());
       debugPrint('[FCM] Token: $currentToken');
     } catch (e) {
@@ -57,6 +60,7 @@ abstract final class PushNotificationService {
       debugPrint('[FCM] getToken failed, will retry via onTokenRefresh: $e');
     }
 
+    // ignore: deprecated_member_use
     fcm.onTokenRefresh.listen((token) {
       debugPrint('[FCM] Token refreshed: $token');
       _setToken(token);

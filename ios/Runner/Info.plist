@@ -34,7 +34,7 @@
 	<string>MWG Tracker needs permission to save images to your photo library.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>MWG Tracker needs photo library access to upload images.</string>
-	<key>_UIApplicationSceneManifest</key>
+	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
